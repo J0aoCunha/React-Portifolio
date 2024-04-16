@@ -1,6 +1,7 @@
-import { Icons } from "../utils/Icons";
+import { retunrIcons } from "../utils/returnIcons";
+import { mapType } from "../@types/mapType";
 
-const informations = [
+const informations: mapType[] = [
   {
     id: 1,
     icon: "MapPin",
@@ -50,7 +51,7 @@ export default function Information() {
       {informations.map((info) => {
         return (
           <div className="flex gap-5 " key={info.id}>
-            <span>{Icons(info.icon)}</span>
+            <span>{retunrIcons(info.icon)}</span>
             <a
               target="_blank"
               href={info.link}
