@@ -1,4 +1,4 @@
-import { IconType } from "../@types/iconsType";
+import { IconType } from "../@types/iconType";
 import {
   MapPin,
   Suitcase,
