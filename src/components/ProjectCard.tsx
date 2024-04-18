@@ -3,18 +3,28 @@ import { RepoType } from "../@types/RepoType";
 
 const repos: RepoType[] = [
   {
+    id: 1,
     name: "API JUJUTSU KAISEN",
     description:
-      "Esta é uma API dedicada ao anime JUJUTSU KAISEN. Ela fornece uma ampla gama de informações relacionadas ao anime.",
+      "Esta é uma API dedicada ao anime JUJUTSU KAISEN. Ela fornece uma ampla gama de informações relacionadas ao anime. Esta API foi desenvolvida usando Node.js e Express",
     language: "TypeScript",
     svn_url: "https://github.com/J0aoCunha/API-JJK",
   },
   {
+    id: 2,
     name: "Login Page",
     description:
       "Este é um projeto simples de uma página de login desenvolvida usando React, React Hook Form e Zod para validação de formulários.",
     language: "TypeScript",
     svn_url: "https://github.com/J0aoCunha/React-Login-Page",
+  },
+  {
+    id: 3,
+    name: "API THE VAMPIRE DIARIES",
+    description:
+      "API simples para administrar informações sobre personagens de Diários de Vampiros. Esta API foi desenvolvida usando Node.js e Fastify.",
+    language: "TypeScript",
+    svn_url: "https://github.com/J0aoCunha/Ts-node-api-tvd",
   },
 ];
 
@@ -27,9 +37,9 @@ export default function ProjectCard() {
             href={repo.svn_url}
             target="_blank"
             className="w-[461px] h-[186px] rounded-3xl bg-[#302F3D] shadow-sm flex flex-col justify-evenly  p-[30px] gap-5  "
-            key={repo.name}
+            key={repo.id}
           >
-            <div className="flex gap-4" key={repo.name}>
+            <div className="flex gap-4">
               <FolderSimple size={20} color="#837E9F" />
               <h2 className="font-bold text-base leading-normal not-italic text-[#837E9F]">
                 {repo.name}
