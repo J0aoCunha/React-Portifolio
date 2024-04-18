@@ -32,12 +32,6 @@ const informations: mapType[] = [
     link: "https://twitter.com/Jvjunger1",
   },
   {
-    id: 6,
-    icon: "Globe",
-    info: "https://J0aoCunha.dev",
-    link: "#",
-  },
-  {
     id: 7,
     icon: "EnvelopeSimple",
     info: "jvscunha04@gmail.com",
@@ -47,7 +41,7 @@ const informations: mapType[] = [
 
 export default function Information() {
   return (
-    <div className="w-[348px] h-[348px] bg-[#302F3D] rounded-[20px] flex flex-col gap-5 px-10 py-[30px]">
+    <div className="w-[348px] h-auto bg-[#302F3D] rounded-[20px] flex flex-col gap-5 px-10 py-[30px]">
       {informations.map((info) => {
         return (
           <div className="flex gap-5 " key={info.id}>
