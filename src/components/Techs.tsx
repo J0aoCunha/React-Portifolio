@@ -8,6 +8,8 @@ const techs = [
   "Docker",
   "Git",
   "GitHub",
+  "Fastify",
+  "Bancos SQL",
 ];
 
 export default function Techs() {
