@@ -24,13 +24,19 @@ export default function Experiences() {
       {experiences.map((exp) => {
         return (
           <div className="ml-5">
-            <h3 className="text-sm font-bold not-italic leading-normal text-[#837E9F] ">
-              {exp.company}
-            </h3>
-            <p className="text-[#837E9F] font-light not-italic leading-normal text-xs">
+            <div className="flex gap-2 items-center">
+              <span className="text-sm font-bold not-italic leading-normal text-[#837E9F] ">
+                ·
+              </span>
+              <h3 className="text-sm font-bold not-italic leading-normal text-[#837E9F] ">
+                {exp.company}
+              </h3>
+            </div>
+
+            <p className="text-[#837E9F] font-light not-italic leading-normal text-xs ml-3">
               {exp.start} - {exp.end}
             </p>
-            <p className="text-[#837E9F] font-normal not-italic leading-normal text-xs">
+            <p className="text-[#837E9F] font-normal not-italic leading-normal text-xs ml-3">
               {exp.role}
             </p>
           </div>
