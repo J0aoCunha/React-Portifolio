@@ -1,3 +1,4 @@
+import Educations from "./components/Education";
 import Experiences from "./components/Experiences";
 import ProjectCard from "./components/ProjectCard";
 import Techs from "./components/Techs";
@@ -18,6 +19,7 @@ function App() {
         <Information />
         <Techs />
         <Experiences />
+        <Educations />
       </aside>
       <main className="flex flex-col w-[952px] gap-8">
         <header className="flex items-center p-8 h-[86px] w-full rounded-[20px] bg-[#302F3D] gap-8 justify-between">
