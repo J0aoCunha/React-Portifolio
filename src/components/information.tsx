@@ -41,7 +41,7 @@ const informations: mapType[] = [
 
 export default function Information() {
   return (
-    <div className="w-[348px] h-auto bg-[#302F3D] rounded-[20px] flex flex-col gap-5 px-10 py-[30px]">
+    <div className="w-[348px] xl:h-auto bg-[#302F3D] rounded-[20px] flex flex-col gap-5 px-10 py-[30px] shadow-md">
       {informations.map((info) => {
         return (
           <div className="flex gap-5 " key={info.id}>

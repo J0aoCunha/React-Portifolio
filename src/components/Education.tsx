@@ -29,13 +29,13 @@ const educations: EducationType[] = [
 
 export default function Educations() {
   return (
-    <div className="w-[348px] h-auto rounded-3xl bg-[#302F3D] px-5 py-[30px] gap-5 flex flex-col">
+    <div className="w-[348px] xl:h-auto rounded-3xl bg-[#302F3D] px-5 py-[30px] gap-5 flex flex-col shadow-md">
       <h2 className="text-[#837E9F] text-xl leading-normal font-bold not-italic">
         Education
       </h2>
       {educations.map((education) => {
         return (
-          <div className="ml-5">
+          <div className="ml-5" key={education.school}>
             <div className="flex gap-2 items-center">
               <span className="text-sm font-bold not-italic leading-normal text-[#837E9F] ">
                 ·

@@ -14,7 +14,7 @@ const techs = [
 
 export default function Techs() {
   return (
-    <div className="flex flex-col px-5 py-[30px] h-auto w-[348px] rounded-3xl bg-[#302F3D] shadow-sm gap-5">
+    <div className="flex flex-col px-5 py-[30px] xl:h-auto w-[348px] rounded-3xl bg-[#302F3D] gap-5 shadow-md">
       <h2 className="text-[#837E9F] text-xl leading-normal font-bold not-italic">
         Technologies
       </h2>

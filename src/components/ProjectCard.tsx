@@ -36,7 +36,7 @@ export default function ProjectCard() {
           <a
             href={repo.svn_url}
             target="_blank"
-            className="w-[461px] h-[186px] rounded-3xl bg-[#302F3D] shadow-sm flex flex-col px-8 py-6 gap-5  "
+            className="xl:w-[461px] xl:h-[186px] rounded-3xl bg-[#302F3D] shadow-md flex flex-col px-8 py-6 gap-5 md:w-auto"
             key={repo.id}
           >
             <div className="flex gap-4">
