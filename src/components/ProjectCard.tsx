@@ -1,32 +1,32 @@
-import { FolderSimple } from "@phosphor-icons/react";
-import { RepoType } from "../@types/RepoType";
+import { FolderSimple } from "@phosphor-icons/react"
+import { RepoType } from "../@types/RepoType"
 
 const repos: RepoType[] = [
   {
     id: 1,
-    name: "API JUJUTSU KAISEN",
-    description:
-      "Esta é uma API dedicada ao anime JUJUTSU KAISEN. Ela fornece uma ampla gama de informações relacionadas ao anime. Esta API foi desenvolvida usando Node.js e Express",
-    language: "TypeScript",
-    svn_url: "https://github.com/J0aoCunha/API-JJK",
-  },
-  {
-    id: 2,
     name: "Login Page",
     description:
-      "Este é um projeto simples de uma página de login desenvolvida usando React, React Hook Form e Zod para validação de formulários.",
+      "This is a simple project of a login page developed using React, React Hook Form and Zod for form validation.",
     language: "TypeScript",
     svn_url: "https://github.com/J0aoCunha/React-Login-Page",
   },
   {
-    id: 3,
-    name: "API THE VAMPIRE DIARIES",
+    id: 2,
+    name: "To Do List",
     description:
-      "API simples para administrar informações sobre personagens de Diários de Vampiros. Esta API foi desenvolvida usando Node.js e Fastify.",
+      "This is a simple project of a to-do list developed using React and TypeScript.",
     language: "TypeScript",
-    svn_url: "https://github.com/J0aoCunha/Ts-node-api-tvd",
+    svn_url: "https://github.com/J0aoCunha/React-To-Do-list",
   },
-];
+  {
+    id: 3,
+    name: "file uploads",
+    description:
+      "This is a backend project developed in Node.js with TypeScript, focused on facilitating the upload and download of files on Cloudflare's R2.",
+    language: "TypeScript",
+    svn_url: "https://github.com/J0aoCunha/Ts-Node-uploads",
+  },
+]
 
 export default function ProjectCard() {
   return (
@@ -62,8 +62,8 @@ export default function ProjectCard() {
               </div>
             </section>
           </a>
-        );
+        )
       })}
     </>
-  );
+  )
 }
