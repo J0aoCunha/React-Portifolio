@@ -2,6 +2,8 @@
 
 Bem-vindo ao meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minha trajetória, experiências, tecnologias dominadas e alguns dos projetos nos quais trabalhei. Ele é construído com foco em simplicidade, design responsivo e fácil navegação.
 
+**Acesse em:** [joaocunha.vercel.app](https://joaocunha.vercel.app)
+
 ---
 
 ## 🚀 Sobre o Projeto
