@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+# João Cunha | Portfólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minha trajetória, experiências, tecnologias dominadas e alguns dos projetos nos quais trabalhei. Ele é construído com foco em simplicidade, design responsivo e fácil navegação.
 
-Currently, two official plugins are available:
+![Preview](https://github.com/J0aoCunha/React-Portifolio/raw/main/public/brackets-curly.svg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Sobre o Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Este portfólio foi criado com as seguintes tecnologias:
 
-- Configure the top-level `parserOptions` property like this:
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Phosphor Icons**
+- **ESLint com TypeScript plugin**
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+O site mostra meu perfil profissional, experiências acadêmicas e profissionais, tecnologias que domino e links para meus projetos no GitHub.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## ✨ Funcionalidades
+
+- **Perfil** com nome, cargo e foto.
+- **Informações de contato** com ícones interativos e links.
+- **Lista de tecnologias** organizadas em tags visuais.
+- **Experiências profissionais**.
+- **Formação acadêmica**.
+- **Cards de projetos** com links diretos para o GitHub.
+- **Sessão "Sobre mim"** com uma breve introdução pessoal.
+
+---
+***bash
+src/
+├── components/        # Componentes reutilizáveis (ProjectCard, Techs, etc)
+├── @types/            # Tipagens TypeScript
+├── utils/             # Funções auxiliares
+├── App.tsx            # Componente principal
+├── index.css          # Estilização global com Tailwind
+└── main.tsx           # Ponto de entrada da aplicação
+***
