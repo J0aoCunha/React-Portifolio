@@ -2,8 +2,6 @@
 
 Bem-vindo ao meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minha trajetória, experiências, tecnologias dominadas e alguns dos projetos nos quais trabalhei. Ele é construído com foco em simplicidade, design responsivo e fácil navegação.
 
-![Preview](https://github.com/J0aoCunha/React-Portifolio/raw/main/public/brackets-curly.svg)
-
 ---
 
 ## 🚀 Sobre o Projeto
@@ -41,3 +39,11 @@ src/
 ├── index.css          # Estilização global com Tailwind
 └── main.tsx           # Ponto de entrada da aplicação
 ```
+
+📫 Contato
+	•	Email: jvscunha04@gmail.com
+	•	LinkedIn: linkedin.com/in/j0aocunha
+	•	Twitter: @Jvjunger1
+
+Desenvolvido com dedicação por João Victor da Silva Cunha
+
