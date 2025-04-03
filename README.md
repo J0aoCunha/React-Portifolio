@@ -33,6 +33,7 @@ O site mostra meu perfil profissional, experiências acadêmicas e profissionais
 
 ---
 ###bash
+
 src/
 ├── components/        # Componentes reutilizáveis (ProjectCard, Techs, etc)
 ├── @types/            # Tipagens TypeScript
