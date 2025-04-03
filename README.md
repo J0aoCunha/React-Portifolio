@@ -32,7 +32,7 @@ O site mostra meu perfil profissional, experiências acadêmicas e profissionais
 - **Sessão "Sobre mim"** com uma breve introdução pessoal.
 
 ---
-
+```bash
 src/
 ├── components/        # Componentes 
 ├── @types/            # Tipagens TypeScript
@@ -40,3 +40,4 @@ src/
 ├── App.tsx            # Componente principal
 ├── index.css          # Estilização global com Tailwind
 └── main.tsx           # Ponto de entrada da aplicação
+```
