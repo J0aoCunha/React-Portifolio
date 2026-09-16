@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/500.css";
+@import "@fontsource/jetbrains-mono/700.css";
 
 @tailwind base;
 @tailwind components;
@@ -6,6 +8,15 @@
 
 @layer base {
   html {
-    font-family: "Merriweather Sans", sans-serif;
+    font-family: "JetBrains Mono", monospace;
   }
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
 }
