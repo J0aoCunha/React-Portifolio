@@ -1,5 +1,6 @@
 import { techs } from "../data/techs";
 import TerminalWindow from "./TerminalWindow";
+import { retunrIcons } from "../utils/returnIcons";
 
 const categoryColor: Record<string, string> = {
   "power-platform/": "border-accent text-accent",
@@ -18,8 +19,9 @@ export default function Techs() {
             {group.items.map((item) => (
               <span
                 key={item}
-                className={`px-3 py-1 rounded-md border text-xs bg-panel-alt ${categoryColor[group.category]}`}
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-md border text-xs bg-panel-alt ${categoryColor[group.category]}`}
               >
+                {retunrIcons(item)}
                 {item}
               </span>
             ))}
