@@ -6,7 +6,7 @@ function Profile() {
   return (
     <TerminalWindow
       title="whoami"
-      className="w-full xl:w-[348px] lg:w-full items-center"
+      className="w-full items-center"
     >
       <div className="flex flex-col items-center gap-4">
         <Photo image={"https://github.com/J0aoCunha.png"} />

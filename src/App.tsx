@@ -13,8 +13,8 @@ import { about } from "./data/profile";
 
 function App() {
   return (
-    <div className="w-full min-h-screen bg-base p-10 flex flex-col xl:flex-row gap-8 font-mono justify-center md:flex-col">
-      <aside className="flex xl:flex-col lg:flex lg:flex-row lg:flex-wrap gap-8 flex-wrap justify-center md:grid md:grid-cols-2">
+    <div className="w-full min-h-screen bg-base p-4 sm:p-6 lg:p-10 flex flex-col lg:flex-row gap-6 lg:gap-8 font-mono lg:justify-center lg:items-start">
+      <aside className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-col gap-6 lg:gap-8 w-full lg:w-[340px] lg:shrink-0">
         <Profile />
         <Information />
         <Techs />
@@ -22,7 +22,7 @@ function App() {
         <Educations />
       </aside>
 
-      <main className="flex flex-col xl:w-[952px] gap-8 md:w-auto">
+      <main className="flex flex-col gap-6 lg:gap-8 w-full lg:flex-1 lg:max-w-[952px] min-w-0">
         <CommandHeader
           command="cat about.md"
           link="See More"
@@ -45,7 +45,7 @@ function App() {
           link="See More"
           linkHref="https://github.com/J0aoCunha?tab=repositories"
         />
-        <section className="h-auto gap-6 grid xl:grid-cols-2 items-stretch justify-center md:grid-cols-1">
+        <section className="h-auto gap-6 grid grid-cols-1 md:grid-cols-2 items-stretch">
           <ProjectCard />
         </section>
       </main>

@@ -3,7 +3,7 @@ import TerminalWindow from "./TerminalWindow";
 
 export default function Experiences() {
   return (
-    <TerminalWindow title="experience/" className="w-full xl:w-[952px]">
+    <TerminalWindow title="experience/" className="w-full">
       {experiences.map((exp, index) => {
         return (
           <div

@@ -4,7 +4,7 @@ import TerminalWindow from "./TerminalWindow";
 
 export default function Information() {
   return (
-    <TerminalWindow title="contact.sh" className="w-full xl:w-[348px]">
+    <TerminalWindow title="contact.sh" className="w-full">
       {contact.map((info) => {
         return (
           <div className="flex gap-4 items-center" key={info.id}>

@@ -11,7 +11,7 @@ const categoryColor: Record<string, string> = {
 
 export default function Techs() {
   return (
-    <TerminalWindow title="ls stack/" className="w-full xl:w-[348px]">
+    <TerminalWindow title="ls stack/" className="w-full">
       {techs.map((group) => (
         <div key={group.category} className="flex flex-col gap-3">
           <h3 className="text-muted text-xs">{group.category}</h3>

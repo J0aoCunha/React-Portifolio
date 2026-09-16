@@ -3,7 +3,7 @@ import TerminalWindow from "./TerminalWindow";
 
 export default function Educations() {
   return (
-    <TerminalWindow title="education.md" className="w-full xl:w-[348px]">
+    <TerminalWindow title="education.md" className="w-full">
       {educations.map((education) => {
         return (
           <div key={education.school}>

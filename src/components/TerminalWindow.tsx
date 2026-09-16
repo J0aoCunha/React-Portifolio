@@ -21,7 +21,7 @@ export default function TerminalWindow({
         <span className="w-3 h-3 rounded-full bg-[#28C840]" />
         {title && <span className="ml-2 text-xs text-muted">{title}</span>}
       </div>
-      <div className="p-6 flex flex-col gap-5">{children}</div>
+      <div className="p-4 sm:p-6 flex flex-col gap-4 sm:gap-5">{children}</div>
     </div>
   );
 }

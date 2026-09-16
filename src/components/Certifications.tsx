@@ -9,7 +9,7 @@ const categoryColor: Record<string, string> = {
 
 export default function Certifications() {
   return (
-    <TerminalWindow title="certifications.log" className="w-full xl:w-[348px]">
+    <TerminalWindow title="certifications.log" className="w-full">
       {certifications.map((group) => (
         <div key={group.category} className="flex flex-col gap-3">
           <h3 className="text-muted text-xs">
