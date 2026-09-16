@@ -26,7 +26,7 @@ function App() {
         <CommandHeader
           command="cat about.md"
           link="See More"
-          linkHref="https://github.com/J0aoCunha?tab=repositories"
+          linkHref="https://www.linkedin.com/in/j0aocunha/"
         />
 
         <TerminalWindow title="about.md">
