@@ -3,4 +3,6 @@ export type ExpType = {
   start: string;
   end: string;
   role: string;
+  location?: string;
+  highlights?: string[];
 };
