@@ -1,51 +1,65 @@
 # João Cunha | Portfólio Pessoal
 
-Bem-vindo ao meu portfólio pessoal! Este projeto foi desenvolvido para apresentar minha trajetória, experiências, tecnologias dominadas e alguns dos projetos nos quais trabalhei. Ele é construído com foco em simplicidade, design responsivo e fácil navegação.
+Portfólio pessoal com uma interface inspirada no **VS Code** (tema Min Dark): cada seção do currículo é um "arquivo" que se abre numa aba, navegado por um Explorer lateral — nada de rolar a página, é tudo abrir e fechar arquivo.
 
 **Acesse em:** [joaocunha.vercel.app](https://joaocunha.vercel.app)
 
 ---
 
-## 🚀 Sobre o Projeto
+## 🚀 Sobre o projeto
 
-Este portfólio foi criado com as seguintes tecnologias:
+- **React 18** + **TypeScript** + **Vite**
+- **Tailwind CSS**, com uma paleta baseada no [Min Theme](https://github.com/miguelsolorio/min-theme) (Min Dark)
+- Ícones: **Phosphor Icons** (chrome geral da UI), **react-icons / Simple Icons** (logos reais de cada tecnologia no `stack.json`) e **lucide-react** (ícones decorativos da activity bar)
+- **ESLint** com plugin de TypeScript
 
-- **React 18**
-- **TypeScript**
-- **Vite**
-- **Tailwind CSS**
-- **Phosphor Icons**
-- **ESLint com TypeScript plugin**
+## 🖥️ Como funciona
 
-O site mostra meu perfil profissional, experiências acadêmicas e profissionais, tecnologias que domino e links para meus projetos no GitHub.
+- A **sidebar (Explorer)** fica sempre visível e lista os "arquivos" do site: `about.md`, `contact.json`, `stack.json`, `experience.json`, `education.md`, `certifications.log` e a pasta `projects/`.
+- Clicar num arquivo abre ele numa aba (**tab bar**), dá pra manter várias abas abertas e trocar entre elas — `about.md` já vem aberto por padrão.
+- Cada tipo de arquivo é renderizado com destaque de sintaxe próprio: `.json` como JSON de verdade (chave/string coloridas), `.md` como markdown "cru" estilizado, `.log` como linhas de log.
+- A activity bar (ícones à esquerda) é só decorativa, no mesmo estilo do [fala.dev](https://fala.dev) — a navegação real acontece pelo Explorer.
 
----
+## 📂 Estrutura
 
-## ✨ Funcionalidades
-
-- **Perfil** com nome, cargo e foto.
-- **Informações de contato** com ícones interativos e links.
-- **Lista de tecnologias** organizadas em tags visuais.
-- **Experiências profissionais**.
-- **Formação acadêmica**.
-- **Cards de projetos** com links diretos para o GitHub.
-- **Sessão "Sobre mim"** com uma breve introdução pessoal.
-
----
 ```bash
 src/
-├── components/        # Componentes 
-├── @types/            # Tipagens TypeScript
-├── utils/             # Funções auxiliares
-├── App.tsx            # Componente principal
-├── index.css          # Estilização global com Tailwind
-└── main.tsx           # Ponto de entrada da aplicação
+├── @types/             # Tipagens TypeScript
+├── components/
+│   ├── ide/             # Shell da IDE
+│   │   ├── views/        # Uma view por "arquivo" (About, Contact, Stack, Experience, Education, Certifications, Project)
+│   │   ├── TitleBar.tsx
+│   │   ├── ActivityBar.tsx
+│   │   ├── Explorer.tsx
+│   │   ├── TabBar.tsx
+│   │   ├── EditorPane.tsx
+│   │   ├── StatusBar.tsx
+│   │   └── Syntax.tsx    # Primitivos de sintaxe colorida (chave, string, comentário...)
+│   ├── Icons.tsx         # Mapa de ícones usados no site
+│   └── Photo.tsx
+├── data/                # Conteúdo do site — fonte única de verdade por seção
+├── utils/
+├── App.tsx
+├── index.css
+└── main.tsx
 ```
 
+Atualizar conteúdo (experiência, stack, certificações, projetos, educação) é só editar o arquivo correspondente em `src/data/` — as views só renderizam o que está lá.
+
+## 🔧 Rodando localmente
+
+```bash
+npm install
+npm run dev
+```
+
+Outros scripts: `npm run build`, `npm run lint`, `npm run preview`.
+
+---
+
 📫 Contato
-	•	Email: jvscunha04@gmail.com
-	•	LinkedIn: linkedin.com/in/j0aocunha
-	•	Twitter: @Jvjunger1
+- Email: jvscunha04@gmail.com
+- LinkedIn: [linkedin.com/in/j0aocunha](https://www.linkedin.com/in/j0aocunha/)
+- GitHub: [github.com/J0aoCunha](https://github.com/J0aoCunha)
 
-Desenvolvido com dedicação por João Victor da Silva Cunha
-
+Desenvolvido por João Victor da Silva Cunha
