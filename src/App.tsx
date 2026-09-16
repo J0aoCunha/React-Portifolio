@@ -1,56 +1,61 @@
-import Educations from "./components/Education";
-import Experiences from "./components/Experiences";
-import Certifications from "./components/Certifications";
-import CommandHeader from "./components/CommandHeader";
-import ProjectCard from "./components/ProjectCard";
-import Techs from "./components/Techs";
-import Information from "./components/information";
-import Profile from "./components/profile";
-import TerminalWindow from "./components/TerminalWindow";
+import { useState } from "react";
+import TitleBar from "./components/ide/TitleBar";
+import ActivityBar from "./components/ide/ActivityBar";
+import Explorer from "./components/ide/Explorer";
+import TabBar from "./components/ide/TabBar";
+import EditorPane from "./components/ide/EditorPane";
+import StatusBar from "./components/ide/StatusBar";
+import { DEFAULT_OPEN_TABS } from "./data/files";
 
 import "./index.css";
-import { about } from "./data/profile";
 
 function App() {
-  return (
-    <div className="w-full min-h-screen bg-base p-4 sm:p-6 lg:p-10 flex flex-col lg:flex-row gap-6 lg:gap-8 font-mono lg:justify-center lg:items-start">
-      <aside className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-col gap-6 lg:gap-8 w-full lg:w-[340px] lg:shrink-0">
-        <Profile />
-        <Information />
-        <Techs />
-        <Certifications />
-        <Educations />
-      </aside>
+	const [openTabs, setOpenTabs] = useState<string[]>(DEFAULT_OPEN_TABS);
+	const [activeTab, setActiveTab] = useState<string | null>(
+		DEFAULT_OPEN_TABS[0] ?? null,
+	);
 
-      <main className="flex flex-col gap-6 lg:gap-8 w-full lg:flex-1 lg:max-w-[952px] min-w-0">
-        <CommandHeader
-          command="cat about.md"
-          link="See More"
-          linkHref="https://www.linkedin.com/in/j0aocunha/"
-        />
+	function openFile(id: string) {
+		setOpenTabs((prev) => (prev.includes(id) ? prev : [...prev, id]));
+		setActiveTab(id);
+	}
 
-        <TerminalWindow title="about.md">
-          {about.map((paragraph, index) => (
-            <p key={index} className="text-muted text-sm leading-relaxed">
-              {paragraph}
-            </p>
-          ))}
-        </TerminalWindow>
+	function closeTab(id: string) {
+		setOpenTabs((prev) => {
+			const idx = prev.indexOf(id);
+			const next = prev.filter((tab) => tab !== id);
+			if (activeTab === id) {
+				setActiveTab(next[idx] ?? next[idx - 1] ?? null);
+			}
+			return next;
+		});
+	}
 
-        <CommandHeader command="ls experience/" />
-        <Experiences />
+	return (
+		<div className="w-full h-screen flex flex-col bg-editor font-mono overflow-hidden">
+			<TitleBar />
 
-        <CommandHeader
-          command="ls projects/"
-          link="See More"
-          linkHref="https://github.com/J0aoCunha?tab=repositories"
-        />
-        <section className="h-auto gap-6 grid grid-cols-1 md:grid-cols-2 items-stretch">
-          <ProjectCard />
-        </section>
-      </main>
-    </div>
-  );
+			<div className="flex-1 flex min-h-0">
+				<ActivityBar />
+
+				<div className="w-32 sm:w-48 md:w-56 lg:w-64 shrink-0 border-r border-line">
+					<Explorer activeTab={activeTab} onOpenFile={openFile} />
+				</div>
+
+				<div className="flex-1 flex flex-col min-w-0">
+					<TabBar
+						openTabs={openTabs}
+						activeTab={activeTab}
+						onSelect={setActiveTab}
+						onClose={closeTab}
+					/>
+					<EditorPane activeTab={activeTab} />
+				</div>
+			</div>
+
+			<StatusBar activeTab={activeTab} />
+		</div>
+	);
 }
 
 export default App;
