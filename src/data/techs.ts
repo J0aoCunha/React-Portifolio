@@ -10,7 +10,11 @@ export const techs: TechCategory[] = [
     items: ["Go", "JavaScript", "TypeScript"],
   },
   {
+    category: "web-dev/",
+    items: ["React", "Node.js", "Express", "Fastify", "Prisma"],
+  },
+  {
     category: "tools/",
-    items: ["Azure DevOps", "Git", "GitHub", "Microsoft Office"],
+    items: ["Docker", "Bancos SQL", "Git", "GitHub", "Azure DevOps", "Microsoft Office"],
   },
 ];

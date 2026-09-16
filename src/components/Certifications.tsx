@@ -7,8 +7,20 @@ export default function Certifications() {
     <TerminalWindow title="certifications.log" className="w-full xl:w-[348px]">
       {certifications.map((cert) => (
         <div className="flex gap-3 items-start" key={cert.id}>
-          <CheckCircle size={18} color="#7EE787" className="mt-0.5 shrink-0" />
-          <span className="text-muted text-sm leading-normal">{cert.name}</span>
+          <CheckCircle
+            size={18}
+            color={cert.highlight ? "#7EE787" : "#7C8394"}
+            className="mt-0.5 shrink-0"
+          />
+          <span
+            className={
+              cert.highlight
+                ? "text-ink text-sm font-bold leading-normal"
+                : "text-muted text-sm leading-normal"
+            }
+          >
+            {cert.name}
+          </span>
         </div>
       ))}
     </TerminalWindow>

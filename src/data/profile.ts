@@ -5,8 +5,8 @@ export const profile = {
 };
 
 export const about = [
-  "Sou Desenvolvedor de Software, com experiência em soluções corporativas, automação de processos e Microsoft Power Platform. Combino a vivência prática em projetos de grande porte com a formação em Sistemas de Informação.",
-  "No Banestes, desenvolvi mais de 30 sistemas e automações internas, atendendo mais de 10 áreas diferentes dentro de uma organização com mais de 3 mil colaboradores. Também virei referência técnica para os estagiários que chegavam, ajudando na evolução deles com Google AppSheet e Looker Studio.",
-  "Hoje, na Prosperi, trabalho no desenvolvimento do Planner Premium para a operação global da CBMM, usando Power Apps, Power Automate e Dataverse. Já participei da criação e manutenção de mais de 40 fluxos e automações envolvendo mais de 10 tabelas do Dataverse. Uma das entregas que mais me orgulho foi a evolução da Central de Aprovações da solução — deixei o processo mais robusto e resolvi limitações que incomodavam os usuários no fluxo de aprovação.",
-  "Além disso, curso Sistemas de Informação na FAESA, o que reforça minha base em desenvolvimento, arquitetura de software, banco de dados e fundamentos de computação. Atualmente minha atuação está concentrada em Power Platform e automação, mas venho estudando JavaScript e TypeScript para expandir para o desenvolvimento high-code.",
+  "Sou o João, dev de Vitória-ES. Estudo Sistemas de Informação na FAESA, mas boa parte do que sei aprendi mesmo resolvendo problema real dentro de empresa grande.",
+  "Comecei no Banestes, onde passei dois anos criando sistemas e automações pro banco — no fim das contas, mais de 30 soluções rodando em mais de 10 áreas diferentes, numa organização com 3 mil+ colaboradores. Também virei a pessoa que os novos estagiários procuravam quando travavam em AppSheet ou Looker Studio.",
+  "Hoje trabalho na Prosperi, desenvolvendo o Planner Premium pra operação global da CBMM com Power Apps, Power Automate e Dataverse. Já perdi as contas de quantos fluxos criei (mais de 40 até agora), e um dos que mais me orgulho foi reformular do zero a Central de Aprovações — resolveu uma dor que incomodava geral no fluxo de aprovação.",
+  "No momento tô com o pé mais fundo em Power Platform e automação, mas venho estudando JavaScript e TypeScript de novo pra expandir pro lado high-code — React e Node.js voltando pra rotina aos poucos.",
 ];

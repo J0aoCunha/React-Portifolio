@@ -8,10 +8,10 @@ export const experiences: ExpType[] = [
     end: "atual",
     location: "Vitória, ES",
     highlights: [
-      "Desenvolvimento e evolução de 40+ fluxos no Power Automate no projeto Planner Premium (operação global da CBMM).",
-      "Criação de um novo fluxo para a Central de Aprovações, eliminando a necessidade de recriar aprovações no Teams após expiração.",
-      "Automações em 10+ tabelas do Dataverse, conectando regras de negócio em uma arquitetura centralizada na Power Platform.",
-      "Atuação em QA, documentação técnica e homologação com o cliente, com Power Apps Model-Driven, Canvas e Power Automate.",
+      "Criei e evoluí mais de 40 fluxos no Power Automate dentro do Planner Premium, projeto pra operação global da CBMM.",
+      "Recriei do zero a Central de Aprovações — hoje ninguém mais precisa reabrir uma aprovação no Teams só porque ela expirou.",
+      "Automatizei processos ligados a mais de 10 tabelas do Dataverse, juntando regra de negócio numa arquitetura só.",
+      "Também meti a mão em QA, documentação e homologação com o cliente, usando Power Apps (Model-Driven e Canvas) e Power Automate.",
     ],
   },
   {
@@ -21,10 +21,10 @@ export const experiences: ExpType[] = [
     end: "dez/2025",
     location: "Espírito Santo",
     highlights: [
-      "Entrega de 30+ sistemas e automações internas, atendendo 10+ áreas de uma organização com 3 mil+ colaboradores.",
-      "Automação de processos internos com Google AppSheet, transformando necessidades de negócio em soluções digitais.",
-      "Referência técnica para novos estagiários, apoiando evolução em AppSheet e boas práticas de projeto.",
-      "Desenvolvimento de dashboards interativos no Looker Studio para suporte à tomada de decisão.",
+      "Entreguei mais de 30 sistemas e automações internas pra mais de 10 áreas, numa empresa com 3 mil+ colaboradores.",
+      "Usei Google AppSheet pra transformar pedido de área em solução digital de verdade.",
+      "Virei a referência que os novos estagiários procuravam quando travavam em AppSheet.",
+      "Montei dashboards no Looker Studio pra ajudar times a decidir com dado, não com achismo.",
     ],
   },
   {
@@ -34,8 +34,8 @@ export const experiences: ExpType[] = [
     end: "jan/2024",
     location: "Vitória, ES",
     highlights: [
-      "Atendimento ao cidadão em nome da Prefeitura de Vitória, registrando solicitações e reclamações de serviços públicos.",
-      "Triagem de ocorrências e encaminhamento estruturado de demandas para os setores responsáveis.",
+      "Atendi moradores de Vitória em nome da Prefeitura, registrando pedidos e reclamações de serviço público.",
+      "Transformei relato de cidadão em chamado bem estruturado, direto pro setor certo.",
     ],
   },
 ];
