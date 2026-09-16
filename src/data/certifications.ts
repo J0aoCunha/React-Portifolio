@@ -1,8 +1,24 @@
-import { CertificationType } from "../@types/CertificationType";
+import { CertificationGroup } from "../@types/CertificationType";
 
-export const certifications: CertificationType[] = [
-  { id: 1, name: "Power Automate", highlight: true },
-  { id: 2, name: "Aprofundando em Hooks (React)", highlight: true },
-  { id: 3, name: "Conceitos Avançados de Go" },
-  { id: 4, name: "Fundamentos em Go" },
+export const certifications: CertificationGroup[] = [
+  {
+    category: "power-platform/",
+    issuer: "Prosperi",
+    items: [
+      { name: "Power Virtual Agents", date: "mar/2026" },
+      { name: "Power BI", date: "mar/2026" },
+      { name: "Power Apps", date: "mar/2026" },
+      { name: "Power Automate", date: "mar/2026" },
+    ],
+  },
+  {
+    category: "react-node/",
+    issuer: "Rocketseat",
+    items: [
+      { name: "Fundamentos do React", date: "mai/2024" },
+      { name: "Aprofundando em Hooks", date: "jun/2024" },
+      { name: "HTTP e Performance", date: "ago/2024" },
+      { name: "Fundamentos do Node.js", date: "mar/2025" },
+    ],
+  },
 ];

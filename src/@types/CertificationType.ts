@@ -1,5 +1,10 @@
-export type CertificationType = {
-  id: number;
+export type CertificationItem = {
   name: string;
-  highlight?: boolean;
+  date: string;
+};
+
+export type CertificationGroup = {
+  category: string;
+  issuer: string;
+  items: CertificationItem[];
 };
