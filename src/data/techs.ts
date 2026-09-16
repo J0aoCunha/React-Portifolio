@@ -3,7 +3,7 @@ import { TechCategory } from "../@types/TechType";
 export const techs: TechCategory[] = [
   {
     category: "power-platform/",
-    items: ["Power Apps", "Power Automate", "Dataverse", "AppSheet", "Looker Studio", "n8n"],
+    items: ["Power Apps", "Power Automate", "Dataverse", "AppSheet", "Looker Studio"],
   },
   {
     category: "languages/",

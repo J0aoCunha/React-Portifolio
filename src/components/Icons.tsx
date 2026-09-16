@@ -25,7 +25,6 @@ import {
   SiPrisma,
   SiGit,
   SiGithub,
-  SiN8N,
   SiLooker,
 } from "react-icons/si";
 import { FaMicrosoft } from "react-icons/fa";
@@ -63,5 +62,4 @@ export const icons: IconType = {
   Dataverse: <Cylinder size={size} color="#7EE787" />,
   AppSheet: <Table size={size} color="#0F9D58" />,
   "Looker Studio": <SiLooker size={size} color="#4285F4" />,
-  n8n: <SiN8N size={size} color="#EA4B71" />,
 };
