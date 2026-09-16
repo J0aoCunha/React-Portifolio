@@ -1,23 +1,28 @@
 import Photo from "./Photo";
+import TerminalWindow from "./TerminalWindow";
+import { profile } from "../data/profile";
 
-interface ProfilerProps {
-  name?: string;
-  role?: string;
-}
-
-function Profile({ name, role }: ProfilerProps) {
+function Profile() {
   return (
-    <div className="w-full xl:w-[348px] lg:w-full h-[292px] rounded-[20px] bg-[#302F3D] flex  flex-col items-center justify-evenly shadow-md ">
-      <Photo image={"https://github.com/J0aoCunha.png"} />
-      <div className="flex flex-col items-center mt-[-20px]">
-        <h1 className="text-[#837E9F] font-bold xl:text-[23px] lg:text-[23px] leading-normal ">
-          {name}
-        </h1>
-        <p className="text-[#837E9F] font-light not-italic text-[13px] leading-normal">
-          {role}
-        </p>
+    <TerminalWindow
+      title="whoami"
+      className="w-full xl:w-[348px] lg:w-full items-center"
+    >
+      <div className="flex flex-col items-center gap-4">
+        <Photo image={"https://github.com/J0aoCunha.png"} />
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-ink font-bold text-lg leading-normal">
+            {profile.name}
+          </h1>
+          <p className="text-muted font-normal text-xs leading-normal mt-1">
+            {profile.role}
+          </p>
+          <p className="text-accent font-normal text-xs leading-normal mt-1">
+            {profile.location}
+          </p>
+        </div>
       </div>
-    </div>
+    </TerminalWindow>
   );
 }
 

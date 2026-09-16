@@ -10,11 +10,11 @@ import {
 } from "@phosphor-icons/react";
 
 export const icons: IconType = {
-  MapPin: <MapPin size={24} color="#837E9F" />,
-  Suitcase: <Suitcase size={24} color="#837E9F" />,
-  GithubLogo: <GithubLogo size={24} color="#837E9F" />,
-  LinkedinLogo: <LinkedinLogo size={24} color="#837E9F" />,
-  TwitterLogo: <TwitterLogo size={24} color="#837E9F" />,
-  Globe: <Globe size={24} color="#837E9F" />,
-  EnvelopeSimple: <EnvelopeSimple size={24} color="#837E9F" />,
+  MapPin: <MapPin size={20} color="#7EE787" />,
+  Suitcase: <Suitcase size={20} color="#7EE787" />,
+  GithubLogo: <GithubLogo size={20} color="#7EE787" />,
+  LinkedinLogo: <LinkedinLogo size={20} color="#7EE787" />,
+  TwitterLogo: <TwitterLogo size={20} color="#7EE787" />,
+  Globe: <Globe size={20} color="#7EE787" />,
+  EnvelopeSimple: <EnvelopeSimple size={20} color="#7EE787" />,
 };

@@ -1,47 +1,44 @@
-import { ExpType } from "../@types/ExpType";
-
-const experiences: ExpType[] = [
-  {
-    company: "Banestes",
-    start: "2024",
-    end: "at the moment",
-    role: "Trainee",
-  },
-  {
-    company: "Ivox contact center",
-    start: "2022",
-    end: "2023",
-    role: "telemarketing attendant",
-  },
-];
+import { experiences } from "../data/experiences";
+import TerminalWindow from "./TerminalWindow";
 
 export default function Experiences() {
   return (
-    <div className="w-[348px] xl:h-auto rounded-3xl bg-[#302F3D] px-5 py-[30px] gap-5 flex flex-col shadow-md">
-      <h2 className="text-[#837E9F] text-xl leading-normal font-bold not-italic">
-        Experiences
-      </h2>
-      {experiences.map((exp) => {
+    <TerminalWindow title="experience/" className="w-full xl:w-[952px]">
+      {experiences.map((exp, index) => {
         return (
-          <div className="ml-5" key={exp.company}>
-            <div className="flex gap-2 items-center">
-              <span className="text-sm font-bold not-italic leading-normal text-[#837E9F] ">
-                ·
-              </span>
-              <h3 className="text-sm font-bold not-italic leading-normal text-[#837E9F] ">
-                {exp.company}
-              </h3>
+          <div
+            key={exp.company}
+            className={
+              index !== experiences.length - 1
+                ? "pb-5 border-b border-line"
+                : ""
+            }
+          >
+            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+              <h3 className="text-base font-bold text-ink">{exp.company}</h3>
+              <span className="text-accent text-sm">{exp.role}</span>
             </div>
-
-            <p className="text-[#837E9F] font-light not-italic leading-normal text-xs ml-3">
+            <p className="text-muted text-xs mt-1">
               {exp.start} - {exp.end}
+              {exp.location ? ` · ${exp.location}` : ""}
             </p>
-            <p className="text-[#837E9F] font-normal not-italic leading-normal text-xs ml-3">
-              {exp.role}
-            </p>
+
+            {exp.highlights && (
+              <ul className="mt-3 flex flex-col gap-2">
+                {exp.highlights.map((line) => (
+                  <li
+                    key={line}
+                    className="text-muted text-sm leading-normal flex gap-2"
+                  >
+                    <span className="text-accent shrink-0">$</span>
+                    <span>{line}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
         );
       })}
-    </div>
+    </TerminalWindow>
   );
 }

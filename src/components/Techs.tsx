@@ -1,37 +1,30 @@
-const techs = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Node.js",
-  "Express",
-  "Prisma",
-  "Docker",
-  "Git",
-  "GitHub",
-  "Fastify",
-  "Bancos SQL",
-];
+import { techs } from "../data/techs";
+import TerminalWindow from "./TerminalWindow";
+
+const categoryColor: Record<number, string> = {
+  0: "border-accent text-accent",
+  1: "border-info text-info",
+  2: "border-amber text-amber",
+};
 
 export default function Techs() {
   return (
-    <div className="flex flex-col px-5 py-[30px] xl:h-auto w-[348px] rounded-3xl bg-[#302F3D] gap-5 shadow-md">
-      <h2 className="text-[#837E9F] text-xl leading-normal font-bold not-italic">
-        Technologies
-      </h2>
-      <div className="grid grid-cols-3 gap-4">
-        {techs.map((tech) => {
-          return (
-            <div
-              className="flex items-center justify-center w-[86px] h-6 rounded-[30px] bg-[#CB92B1]"
-              key={tech}
-            >
-              <h3 className="text-center text-black text-xs font-bold not-italic leading-normal">
-                {tech}
-              </h3>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <TerminalWindow title="ls stack/" className="w-full xl:w-[348px]">
+      {techs.map((group, index) => (
+        <div key={group.category} className="flex flex-col gap-3">
+          <h3 className="text-muted text-xs">{group.category}</h3>
+          <div className="flex flex-wrap gap-2">
+            {group.items.map((item) => (
+              <span
+                key={item}
+                className={`px-3 py-1 rounded-md border text-xs bg-panel-alt ${categoryColor[index % 3]}`}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </TerminalWindow>
   );
 }
