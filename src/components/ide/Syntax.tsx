@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, CSSProperties } from "react";
 
 export function Line({
   indent = 0,
@@ -9,8 +9,8 @@ export function Line({
 }) {
   return (
     <div
-      style={{ paddingLeft: `${indent * 1.25}rem` }}
-      className="whitespace-pre-wrap break-words"
+      style={{ "--indent": indent } as CSSProperties}
+      className="pl-[calc(var(--indent)*0.75rem)] sm:pl-[calc(var(--indent)*1.25rem)] whitespace-pre-wrap break-words"
     >
       {children}
     </div>

@@ -20,11 +20,11 @@ export default function Explorer({ activeTab, onOpenFile }: ExplorerProps) {
 
   return (
     <div className="h-full flex flex-col bg-sidebar text-sm">
-      <div className="px-4 pt-3 pb-2 text-xs tracking-wide text-muted uppercase">
+      <div className="px-4 pt-3 pb-2 text-xs tracking-wide text-muted uppercase truncate">
         Explorer
       </div>
 
-      <div className="px-2 pb-1 text-xs font-bold text-ink tracking-wide">
+      <div className="px-2 pb-1 text-xs font-bold text-ink tracking-wide truncate">
         JOAO-CUNHA
       </div>
 
@@ -41,7 +41,7 @@ export default function Explorer({ activeTab, onOpenFile }: ExplorerProps) {
                 >
                   {open ? <CaretDown size={12} /> : <CaretRight size={12} />}
                   <FileIcon folder open={open} size={16} />
-                  <span>{node.name}</span>
+                  <span className="truncate">{node.name}</span>
                 </button>
                 {open &&
                   node.children.map((file) => (

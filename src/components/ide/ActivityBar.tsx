@@ -11,31 +11,44 @@ import {
 } from "lucide-react";
 
 /**
- * Puramente decorativa — mesmo conjunto de ícones do fala.dev
- * (lucide-react), sem nenhuma interação de clique. A navegação real
- * acontece só pelo Explorer, que fica sempre visível ao lado.
+ * Basicamente decorativa — mesmo conjunto de ícones do fala.dev
+ * (lucide-react). O único ícone interativo é "Files", que abre/fecha
+ * o Explorer como painel sobreposto abaixo do breakpoint `sm`; acima
+ * dele o Explorer fica sempre visível e esse ícone é inerte.
  */
 const topIcons = [Files, Search, GitFork, Bug, Puzzle, Monitor, FlaskConical];
 
-export default function ActivityBar() {
+interface ActivityBarProps {
+  explorerOpen: boolean;
+  onToggleExplorer: () => void;
+}
+
+export default function ActivityBar({
+  explorerOpen,
+  onToggleExplorer,
+}: ActivityBarProps) {
   return (
-    <div className="w-12 shrink-0 bg-activitybar flex flex-col justify-between py-3">
+    <div className="w-12 shrink-0 bg-activitybar flex flex-col justify-between py-3 relative z-40">
       <div className="flex flex-col">
         {topIcons.map((Icon, index) => {
-          const isActive = index === 0;
+          const isFiles = index === 0;
+          const isActive = isFiles;
           return (
-            <div
+            <button
               key={Icon.displayName}
-              className={`h-12 flex justify-center items-center border-l-2 ${
-                isActive ? "border-ink" : "border-transparent"
-              }`}
+              type="button"
+              onClick={isFiles ? onToggleExplorer : undefined}
+              aria-pressed={isFiles ? explorerOpen : undefined}
+              className={`h-12 flex justify-center items-center border-l-2 sm:pointer-events-none ${
+                isFiles ? "pointer-events-auto" : ""
+              } ${isActive ? "border-ink" : "border-transparent"}`}
             >
               <Icon
                 strokeWidth={1.5}
                 size={22}
                 color={isActive ? "#FAFAFA" : "#888888"}
               />
-            </div>
+            </button>
           );
         })}
       </div>

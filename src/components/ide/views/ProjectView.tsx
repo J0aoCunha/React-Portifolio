@@ -23,7 +23,7 @@ export default function ProjectView({ repoId }: { repoId: number }) {
             href={repo.svn_url}
             target="_blank"
             rel="noreferrer"
-            className="text-syn-string hover:underline"
+            className="text-syn-string hover:underline break-all"
           >
             {repo.svn_url}
           </a>

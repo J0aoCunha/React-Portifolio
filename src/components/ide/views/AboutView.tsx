@@ -5,7 +5,7 @@ import { Punct, Comment } from "../Syntax";
 export default function AboutView() {
   return (
     <div className="flex flex-col gap-6 max-w-3xl">
-      <div className="flex items-center gap-4">
+      <div className="flex flex-col items-start sm:flex-row sm:items-center gap-4">
         <Photo image="https://github.com/J0aoCunha.png" />
         <div>
           <div className="text-ink text-lg font-bold">
